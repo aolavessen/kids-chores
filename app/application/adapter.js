@@ -3,7 +3,7 @@ import DataAdapterMixin from 'ember-simple-auth/mixins/data-adapter-mixin';
 import config from 'kids-chores/config/environment';
 
 export default JSONAPIAdapter.extend(DataAdapterMixin, {
-  host: config.apiHost,
+  host: `url:https://kids-chores.herokuapp.com`,
   namespace: `api`,
   authorizer: `authorizer:application`,
 });
