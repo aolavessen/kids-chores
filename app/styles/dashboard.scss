@@ -1,0 +1,31 @@
+.dashboard-container {
+  max-width: 65rem;
+  margin: auto;
+  background: purple;
+}
+
+.content-container{
+  max-width: 65rem;
+  margin: auto;
+  display: flex;
+  background: blue;
+
+}
+
+.sidebar {
+  width: 30rem;
+  padding-left: 2rem;
+  padding-bottom: 1rem;
+  background: green;
+}
+
+.main-content {
+
+}
+
+.main-items {
+  width: 35rem;
+  padding-left: 2rem;
+
+  // background: pink;
+}
