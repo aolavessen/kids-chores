@@ -1,22 +1,12 @@
 @import "yoga";
+@import 'dashboard';
+@import 'login';
 
 // Uncomment this for working with yoga prototyping
 // http://rtablada.github.io/yoga-sass/#mixin-yoga-prototype
 // @include yoga-prototype();
 
 
-.login-form {
-  background: brown;
-  width: 100%;
-  // text-align: center;
-  display: flex;
-
-}
-
 .header-container {
   background: yellow;
-}
-
-.dashboard-container {
-  background: purple;
 }
