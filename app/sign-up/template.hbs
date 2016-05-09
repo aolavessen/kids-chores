@@ -1,4 +1,4 @@
-<form class="" action="index.html" method="post">
+{{#simple-form class="" onsubmit=(action createNewUser) as |formValues|}}
 
 <p>
   <label>Email</label>
@@ -19,4 +19,4 @@
   <button>Submit</button>
 </p>
 
-</form>
+{{/simple-form}}
