@@ -1,1 +1,31 @@
-{{outlet}}
+<div class="content-container">
+  <div class="sidebar">
+    <div class="sidebar-content">
+      <h2>Kid List</h2>
+        {{outlet}}
+      <ul>
+        {{#each model as |child|}}
+        <li class="child-item">{{model.username}}</li>
+        <li class="child-item">{{model.password}}</li>
+        <li class="child-item">{{model.point-total}}</li>
+        <li class="child-item">{{model.chore}}</li>
+        {{/each}}
+      </ul>
+      {{#link-to "dashboard.parent.newChild"}}
+    <button>Add New Child</button>
+    {{/link-to}}
+  </div>
+  </div>
+  <div class="main-content">
+    <div class="main-items">
+      <h2>Choices</h2>
+        <p>New Chore
+        <button>Add Chore</button>
+      </p>
+      <p>New Reward
+      <button>Add Reward</button>
+    </p>
+    <img src="" alt="">
+    </div>
+  </div>
+</div>
