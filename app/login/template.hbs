@@ -1,24 +1,24 @@
 <div class="main">
   <div class="login-form">
-    <form class="form-field">
+    {{#simple-form class="form-field" onsubmit=(action loginUser) as |formValues|}}
       <p class="form-inputs">
         <label class="input-label">Email:</label>
-        {{input class="input-field" type="text" placeholder="Email" value=email}}
+        {{input class="input-field" type="text" placeholder="Email" value=formValues.email}}
       </p>
 
       <p class="form-field">
         <label class="input-label">Password:</label>
-        {{input class="input-field" type="password" placeholder="Password" value=password}}
+        {{input class="input-field" type="password" placeholder="Password" value=formValues.password}}
       </p>
 
 
-        <button class="login-btn">Login</button>
+      <button class="login-btn">Login</button>
 
 
       {{#link-to "sign-up"}}
         <button class="signup-btn">SignUp</button>
       {{/link-to}}
-    </form>
+    {{/simple-form}}
   </div>
 </div>
 
