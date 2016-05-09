@@ -2,11 +2,18 @@
   <div class="sidebar">
     <div class="sidebar-content">
       <h2>Kid List</h2>
-      {{outlet}}
-      <p>kid 1</p>
-      <p>kid2</p>
-      <p>kids3</p>
-    <button>New Kid</button>
+        {{outlet}}
+      <ul>
+        {{#each model as |child|}}
+        <li class="child-item">{{child.username}}</li>
+        <li class="child-item">{{child.password}}</li>
+        <li class="child-item">{{child.point-total}}</li>
+        <li class="child-item">{{child.chore}}</li>
+        {{/each}}
+      </ul>
+      {{#link-to "dashboard.parent.newChild"}}
+    <button>Add New Child</button>
+    {{/link-to}}
   </div>
   </div>
   <div class="main-content">
