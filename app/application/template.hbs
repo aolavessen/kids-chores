@@ -5,6 +5,14 @@
     </div>
   </div>
 </header>
+{{#link-to "dashboard.parent"}}
+<button class="parent-button">I'm a Parent</button>
+{{/link-to}}
+
+{{#link-to "dashboard.child"}}
+<button class="child-button">I'm a Child</button>
+{{/link-to}}
+
 {{outlet}}
 <div class="footer">
   <div class="footer-animation">
