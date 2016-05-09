@@ -1,1 +1,29 @@
-{{outlet}}
+{{#simple-form class="" onsubmit=(action createNewReward) as |formValues|}}
+
+<p>
+  <label>Picture</label>
+  {{input type="text" name="Pic" value=formValues.avatar}}
+</p>
+
+<p>
+  <label>Name</label>
+  {{input type="text" name="Name" value=formValues.name}}
+</p>
+
+<p>
+  <label>Description</label>
+  {{input type="text" name="Description" value=formValues.description}}
+</p>
+
+<p>
+  <label>Points</label>
+  {{input type="text" name="Points" value=formValues.points}}
+</p>
+
+<p>
+  {{#link-to "dashboard.parent"}}
+  <button>Submit</button>
+  {{/link-to}}
+</p>
+
+{{/simple-form}}
