@@ -4,7 +4,7 @@
       <h2>Kid List</h2>
         {{outlet}}
       <ul>
-        {{#each item as |child|}}
+        {{#each model as |child|}}
         <li class="child-item">{{child.username}}</li>
         <li class="child-item">{{child.password}}</li>
         <li class="child-item">{{child.point-total}}</li>
