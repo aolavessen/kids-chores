@@ -1,5 +1,6 @@
 .dashboard-container {
-  max-width: 65rem;
+  width: 100%;
+
   margin: auto;
   background: purple;
 }
@@ -8,15 +9,17 @@
   max-width: 65rem;
   margin: auto;
   display: flex;
-  background: pink;
+  // background-image: url(http://www.absoluteanime.com/kirby/cleaning_kirby.jpg);
+  // background: pink;
 
 }
 
 .sidebar {
-  width: 30rem;
+  min-width: 30rem;
   padding-left: 2rem;
   padding-bottom: 1rem;
-  background: green;
+
+  // background: green;
 }
 
 .main-content {
