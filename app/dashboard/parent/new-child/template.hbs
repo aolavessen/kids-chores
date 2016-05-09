@@ -1,0 +1,27 @@
+<div class="boss-container">
+  <div class="child-info">
+    <form class="form-field" {{action newChild model on="submit"}}>
+    <p class="form-inputs">
+      <label class="input-label">Username:</label>
+      {{input class="input-field" type="text" placeholder="Username" value=model.username}}
+    </p>
+
+    <p class="form-inputs">
+      <label class="input-label">Password:</label>
+      {{input class="input-field" type="password" placeholder="Password" value=model.password}}
+    </p>
+
+  </form>
+
+    <ul>
+      <li class="child-item">{{model.child.avatar}}</li>
+      <li class="child-item">{{model.child.username}}</li>
+      <li class="child-item">{{model.child.password}}</li>
+      <li class="child-item">{{model.child.point-total}}</li>
+      <li class="child-item">{{model.child.chore}}</li>
+    </ul>
+  </div>
+</div>
+
+
+{{outlet}}
