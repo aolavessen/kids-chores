@@ -1,7 +1,7 @@
 <div class="content-container">
   <div class="sidebar">
     <div class="sidebar-content">
-      <h2>Kid List</h2>
+      <h2>Parent Dashboard</h2>
         {{outlet}}
       <ul>
         {{#each model as |child|}}
@@ -20,7 +20,9 @@
     <div class="main-items">
       <h2>Choices</h2>
         <p>New Chore
+          {{#link-to "dashboard.parent.new-chore"}}
         <button>Add Chore</button>
+        {{/link-to}}
       </p>
       <p>New Reward
       <button>Add Reward</button>
