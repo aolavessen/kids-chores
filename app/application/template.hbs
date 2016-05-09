@@ -1,17 +1,22 @@
 <header>
   <div class="header-container">
     <div class="header-container_items">
-      <h2 class="header-text header-item">Kidz Chorzz</h2>
+      <h2 class="header-text header-item">Kids Chores</h2>
     </div>
-  </div>
-</header>
-{{#link-to "dashboard.parent"}}
-<button class="parent-button">I'm a Parent</button>
-{{/link-to}}
+    {{#link-to "dashboard.parent"}}
+    <button class="button">I'm a Parent</button>
+    {{/link-to}}
+
 
 {{#link-to "dashboard.child"}}
-<button class="child-button">I'm a Child</button>
+<button class="button">I'm a Child</button>
 {{/link-to}}
+
+{{#link-to "login"}}
+<button class="button">Logout</button>
+{{/link-to}}
+</div>
+</header>
 
 {{outlet}}
 <div class="footer">

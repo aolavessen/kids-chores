@@ -10,9 +10,11 @@
       <h2>Kid Avatar</h2>
       <img src="https://s-media-cache-ak0.pinimg.com/236x/03/59/5a/03595aaef122cf3f28cad0f307060493.jpg" alt="">
       {{outlet}}
-      <p>chore 1</p>
-      <p>chore 2</p>
-      <p>chore 3</p>
+    <ul>
+      {{#each model as |chore|}}
+      <li class="chore-item">{{model.chore}}</li>
+      {{/each}}
+    </ul>
   </div>
   </div>
   <div class="main-content">
