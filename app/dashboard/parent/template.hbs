@@ -5,10 +5,10 @@
         {{outlet}}
       <ul>
         {{#each model as |child|}}
-        <li class="child-item">{{child.username}}</li>
-        <li class="child-item">{{child.password}}</li>
-        <li class="child-item">{{child.point-total}}</li>
-        <li class="child-item">{{child.chore}}</li>
+        <li class="child-item">{{model.username}}</li>
+        <li class="child-item">{{model.password}}</li>
+        <li class="child-item">{{model.point-total}}</li>
+        <li class="child-item">{{model.chore}}</li>
         {{/each}}
       </ul>
       {{#link-to "dashboard.parent.newChild"}}

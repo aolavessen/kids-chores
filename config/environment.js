@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    apiHost: 'http://localhost:3000',
+    apiHost: 'https://kids-chores.herokuapp.com',
 
     modulePrefix: 'kids-chores',
     environment: environment,
