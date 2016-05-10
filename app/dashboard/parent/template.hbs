@@ -4,7 +4,7 @@
       <h2>Parent Dashboard</h2>
         {{outlet}}
       <ul>
-        {{#each model.child as |child|}}
+        {{#each model as |child|}}
         <li class="child-item">{{child.username}}</li>
         <li class="child-item">{{child.password}}</li>
         <li class="child-item">{{child.point-total}}</li>
@@ -13,7 +13,7 @@
       </ul>
 
       <ul>
-        {{#each model.chore as |chore|}}
+        {{#each model as |chore|}}
         <li class="chore-item">{{chore.name}}</li>
         <li class="chore-item">{{chore.description}}</li>
         <li class="chore-item">{{chore.avatar}}</li>
