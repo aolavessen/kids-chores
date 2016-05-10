@@ -1,1 +1,12 @@
-{{outlet}}
+<div class="main-content">
+  <div class="main-items">
+    <h4>prize booth view nested in child dash</h4>
+    <ul>
+      {{#each model as |purchase|}}
+      <li class="chore-item">{{purchase.points}}</li>
+      <li class="chore-item">{{purchase.name}}</li>
+      <li class="chore-item">{{purchase.reward}}</li>
+      {{/each}}
+    </ul>
+  </div>
+</div>

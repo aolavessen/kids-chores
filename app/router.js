@@ -11,11 +11,12 @@ Router.map(function() {
   this.route('dashboard', {path:'/'}, function(){
     this.route('logout');
     //add .transitionTo to the logout route.js
-    this.route('parent', {path: '/'}, function(){
+    this.route('parent', function(){
       this.route('new-chore');
       this.route('new-reward');
+      this.route('newChild');
     });
-    this.route('child', {path:'/'}, function(){
+    this.route('child', function(){
       this.route('chore');
       this.route('store');
     });
