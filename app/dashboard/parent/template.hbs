@@ -1,14 +1,24 @@
 <div class="content-container">
   <div class="sidebar">
     <div class="sidebar-content">
-      <h2>Kid List</h2>
+      <h2>Parent Dashboard</h2>
         {{outlet}}
       <ul>
-        {{#each model as |child|}}
+        {{#each model.child as |child|}}
         <li class="child-item">{{child.username}}</li>
         <li class="child-item">{{child.password}}</li>
         <li class="child-item">{{child.point-total}}</li>
         <li class="child-item">{{child.chore}}</li>
+        {{/each}}
+      </ul>
+
+      <ul>
+        {{#each model.chore as |chore|}}
+        <li class="chore-item">{{chore.name}}</li>
+        <li class="chore-item">{{chore.description}}</li>
+        <li class="chore-item">{{chore.avatar}}</li>
+        <li class="chore-item">{{chore.points}}</li>
+        <li class="chore-item">{{chore.date}}</li>
         {{/each}}
       </ul>
       {{#link-to "dashboard.parent.newChild"}}
@@ -20,7 +30,9 @@
     <div class="main-items">
       <h2>Choices</h2>
         <p>New Chore
+          {{#link-to "dashboard.parent.new-chore"}}
         <button>Add Chore</button>
+        {{/link-to}}
       </p>
       <p>New Reward
       <button>Add Reward</button>
