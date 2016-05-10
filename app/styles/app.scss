@@ -15,3 +15,10 @@
 .header-container_items {
   display: flex;
 }
+
+.button-box {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 5rem;
+  padding-left: 5rem;
+}
