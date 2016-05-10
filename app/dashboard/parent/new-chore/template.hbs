@@ -8,25 +8,31 @@
 
     <p class="form-inputs">
       <label class="input-label">Description:</label>
-        {{input class="input-field" type="text" placeholder="Chore Name" value=formValues.description}}
+        {{input class="input-field" type="text" placeholder="Description" value=formValues.description}}
     </p>
 
     <p class="form-inputs">
       <label class="input-label">Avatar:</label>
-        {{input class="input-field" type="text" placeholder="Chore Name" value=formValues.avatar}}
+        {{input class="input-field" type="text" placeholder="Avatar" value=formValues.avatar}}
     </p>
 
     <p class="form-inputs">
       <label class="input-label">Points:</label>
-        {{input class="input-field" type="text" placeholder="Chore Name" value=formValues.points}}
+        {{input class="input-field" type="number" placeholder="Points" value=formValues.points}}
     </p>
 
     <p class="form-inputs">
       <label class="input-label">Date:</label>
-        {{input class="input-field" type="text" placeholder="Chore Name" value=formValues.date}}
+        {{input class="input-field" type="date" placeholder="Date" value=formValues.date}}
     </p>
     <button>Submit</button>
     {{/simple-form}}
 
+  </div>
+
+  <div class="chore-list">
+    <ul>
+      <li></li>
+    </ul>
   </div>
 </div>

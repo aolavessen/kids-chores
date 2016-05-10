@@ -11,6 +11,15 @@
         <li class="child-item">{{child.chore}}</li>
         {{/each}}
       </ul>
+      <ul>
+        {{#each model as |chore|}}
+        <li class="chore-item">{{chore.name}}</li>
+        <li class="chore-item">{{chore.description}}</li>
+        <li class="chore-item">{{chore.avatar}}</li>
+        <li class="chore-item">{{chore.points}}</li>
+        <li class="chore-item">{{chore.date}}</li>
+        {{/each}}
+      </ul>
       {{#link-to "dashboard.parent.newChild"}}
     <button>Add New Child</button>
     {{/link-to}}
