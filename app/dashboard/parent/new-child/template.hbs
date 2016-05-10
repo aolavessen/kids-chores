@@ -1,0 +1,32 @@
+<div class="boss-container">
+  <div class="child-info">
+    {{#simple-form class="" onsubmit=(action createNewChild) as |formValues|}}
+      <p class="form-inputs">
+        <label class="input-label">Username:</label>
+        {{input class="input-field" type="text" placeholder="Username" value=formValues.username}}
+      </p>
+
+      <p class="form-inputs">
+        <label class="input-label">Password:</label>
+        {{input class="input-field" type="password" placeholder="Password" value=formValues.password}}
+      </p>
+
+      <p class="form-inputs">
+        <label class="input-label">Point-Total:</label>
+        {{input class="input-field" type="number" placeholder="Point-Total" value=formValues.point-total}}
+      </p>
+
+      <p class="form-inputs">
+        <label class="input-label">Chore:</label>
+        {{input class="input-field" type="text" placeholder="Chore" value=formValues.chore}}
+      </p>
+
+    <button>Submit</button>
+    {{/simple-form}}
+
+
+  </div>
+</div>
+
+
+{{outlet}}

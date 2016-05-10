@@ -1,1 +1,14 @@
-{{outlet}}
+<div class="main-content">
+  <div class="main-items">
+    <h4>ASSIGNMENT view nested in child dash</h4>
+    <ul>
+      {{#each model as |assignment|}}
+      <li class="chore-item">{{assignment.name}}</li>
+      <li class="chore-item">{{assignment.chores}}</li>
+      <li class="chore-item">{{assignment.pointValue}}</li>
+      <li class="chore-item">{{assignment.date}}</li>
+      <li class="chore-item">{{assignment.checkbox}} X </li>
+      {{/each}}
+    </ul>
+  </div>
+</div>
