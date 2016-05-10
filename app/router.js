@@ -19,6 +19,8 @@ Router.map(function() {
     this.route('child', function(){
       this.route('chore');
       this.route('store');
+      this.route('assignment');
+      this.route('purchase');
     });
   });
 });

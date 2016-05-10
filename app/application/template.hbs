@@ -3,19 +3,20 @@
     <div class="header-container_items">
       <h2 class="header-text header-item">Kids Chores</h2>
     </div>
-    {{#link-to "dashboard.parent"}}
-    <button class="button">I'm a Parent</button>
-    {{/link-to}}
 
+    <button class="button">
+      {{#link-to "dashboard.parent"}}I'm a Parent{{/link-to}}
+    </button>
 
-{{#link-to "dashboard.child"}}
-<button class="button">I'm a Child</button>
-{{/link-to}}
+    <button class="button">
+      {{#link-to "dashboard.child"}}I'm a Child{{/link-to}}
+    </button>
 
-{{#link-to "login"}}
-<button class="button">Logout</button>
-{{/link-to}}
-</div>
+    <button class="button">
+      {{#link-to "login"}}Logout{{/link-to}}
+    </button>
+
+  </div>
 </header>
 
 {{outlet}}
