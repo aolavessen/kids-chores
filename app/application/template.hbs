@@ -4,28 +4,29 @@
       <h2 class="header-text header-item">Kids Chores</h2>
     </div>
 
-    <button class="button">
+    <div class="button-box">
+    <button class="menu-button">
       {{#link-to "dashboard.parent"}}I'm a Parent{{/link-to}}
     </button>
 
-    <button class="button">
+    <button class="menu-button">
       {{#link-to "dashboard.child"}}I'm a Child{{/link-to}}
     </button>
 
-    <button class="button">
+    <button class="menu-button">
       {{#link-to "login"}}Logout{{/link-to}}
     </button>
-
+  </div>
   </div>
 </header>
 
-{{outlet}}
 <div class="footer">
   <div class="footer-animation">
     <div class="logo">Logo</div>
-    <h2>Earn Rewards for Chores!!</h2>
+    <p>Earn Rewards for Chores!!</p>
+  </div>
+  {{outlet}}
     <div class="footer-information">
       <h2>Footer Info</h2>
     </div>
   </div>
-</div>
