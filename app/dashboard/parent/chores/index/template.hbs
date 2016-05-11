@@ -1,0 +1,38 @@
+<h1>INDEX</h1>
+{{#link-to "dashboard.parent.chores.new"}}New Chore{{/link-to}}
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Avatar</th>
+      <th>Points</th>
+      <th>Date</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |chore|}}
+      <tr>
+        <td>{{chore.name}}</td>
+        <td>{{chore.description}}</td>
+        <td>{{chore.avatar}}</td>
+        <td>{{chore.points}}</td>
+        <td>{{chore.date}}</td>
+        <td>
+          {{#link-to "dashboard.parent.chores.edit" chore.id}}
+          <span class="fa fa-pencil"></span>
+          {{/link-to}}
+        </td>
+        <td>
+          <button class="button" {{action delete chore}}>
+            <span class="fa fa-trash"></span>
+          </button>
+        </td>
+      </tr>
+
+    {{/each}}
+  </tbody>
+</table>
