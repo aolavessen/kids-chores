@@ -12,8 +12,12 @@ Router.map(function() {
     this.route('logout');
     //add .transitionTo to the logout route.js
     this.route('parent', function(){
-      this.route('new-chore');
-      this.route('new-reward');
+      this.route('new-chore', function() {
+        this.route('new-chore-item');
+      });
+      this.route('new-reward', function() {
+        this.route('new-reward-item');
+      });
       this.route('newChild');
       this.route('chore');
       this.route('chores', function() {

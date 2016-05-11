@@ -1,0 +1,29 @@
+<div class="reward-container">
+  <div class="reward-info">
+{{#simple-form class="" onsubmit=(action createNewReward) as |formValues|}}
+
+<p class="form-inputs">
+  <label class="input-label">Picture:</label>
+  {{input class="input-field" type="text" name="Pic" placeholder="Picture" value=formValues.avatar}}
+</p>
+
+<p class="form-inputs">
+  <label class="input-label">Name</label>
+  {{input class="input-field" type="text" name="Name" placeholder="Name" value=formValues.name}}
+</p>
+
+<p class="form-inputs">
+  <label class="input-label">Description</label>
+  {{input class="input-field" type="text" name="Description" placeholder="Description" value=formValues.description}}
+</p>
+
+<p class="form-inputs">
+  <label class="input-label">Points</label>
+  {{input class="input-field" type="number" name="Points" placeholder="Points" value=formValues.points}}
+</p>
+
+  <button>Submit</button>
+{{/simple-form}}
+
+</div>
+</div>

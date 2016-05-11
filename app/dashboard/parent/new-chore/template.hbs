@@ -1,38 +1,38 @@
-<div class="chore-container">
-  <div class="chore-info">
-    {{#simple-form class="" onsubmit=(action createNewChore) as |formValues|}}
-    <p class="form-inputs">
-      <label class="input-label">Chore Name:</label>
-        {{input class="input-field" type="text" placeholder="Chore Name" value=formValues.name}}
-    </p>
+<h1>INDEX</h1>
+{{#link-to "dashboard.parent.chores.new"}}New Chore{{/link-to}}
 
-    <p class="form-inputs">
-      <label class="input-label">Description:</label>
-        {{input class="input-field" type="text" placeholder="Description" value=formValues.description}}
-    </p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Avatar</th>
+      <th>Points</th>
+      <th>Date</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |chore|}}
+      <tr>
+        <td>{{chore.name}}</td>
+        <td>{{chore.description}}</td>
+        <td>{{chore.avatar}}</td>
+        <td>{{chore.points}}</td>
+        <td>{{chore.date}}</td>
+        <td>
+          {{#link-to "dashboard.parent.chores.edit" chore.id}}
+          <span class="fa fa-pencil"></span>
+          {{/link-to}}
+        </td>
+        <td>
+          <button class="button" {{action delete chore}}>
+            <span class="fa fa-trash"></span>
+          </button>
+        </td>
+      </tr>
 
-    <p class="form-inputs">
-      <label class="input-label">Avatar:</label>
-        {{input class="input-field" type="text" placeholder="Avatar" value=formValues.avatar}}
-    </p>
-
-    <p class="form-inputs">
-      <label class="input-label">Points:</label>
-        {{input class="input-field" type="number" placeholder="Points" value=formValues.points}}
-    </p>
-
-    <p class="form-inputs">
-      <label class="input-label">Date:</label>
-        {{input class="input-field" type="date" placeholder="Date" value=formValues.date}}
-    </p>
-    <button>Submit</button>
-    {{/simple-form}}
-
-  </div>
-
-  <div class="chore-list">
-    <ul>
-      <li></li>
-    </ul>
-  </div>
-</div>
+    {{/each}}
+  </tbody>
+</table>

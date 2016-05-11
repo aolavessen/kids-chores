@@ -1,29 +1,28 @@
-<div class="reward-container">
-  <div class="reward-info">
-{{#simple-form class="" onsubmit=(action createNewReward) as |formValues|}}
+<h2>All Rewards</h2>
 
-<p class="form-inputs">
-  <label class="input-label">Picture:</label>
-  {{input class="input-field" type="text" name="Pic" placeholder="Picture" value=formValues.avatar}}
-</p>
+{{#link-to "dashboard.parent.rewards.new"}}New Reward{{/link-to}}
+<ul>
+  <li>URL</li>
+  <li>Name</li>
+  <li>Description</li>
+  <li>Points</li>
+  <li></li>
+  <li></li>
+</ul>
+{{#each model as |post|}}
+<ul>
+  <li><img src="{{post.url}}" alt="" width="50"></li>
+  <li>{{post.avatar}}</li>
+  <li>{{post.description}}</li>
+  <li>{{post.points}}</li>
+</ul>
 
-<p class="form-inputs">
-  <label class="input-label">Name</label>
-  {{input class="input-field" type="text" name="Name" placeholder="Name" value=formValues.name}}
-</p>
+{{#link-to "dashboard.parent.rewards.edit" post.id}}
+<span class="fa fa-pencil"></span>
+{{/link-to}}
 
-<p class="form-inputs">
-  <label class="input-label">Description</label>
-  {{input class="input-field" type="text" name="Description" placeholder="Description" value=formValues.description}}
-</p>
+<button class="btn" {{action delete post}}>
+<span class="fa fa-trash"></span>
+</button>
 
-<p class="form-inputs">
-  <label class="input-label">Points</label>
-  {{input class="input-field" type="number" name="Points" placeholder="Points" value=formValues.points}}
-</p>
-
-  <button>Submit</button>
-{{/simple-form}}
-
-</div>
-</div>
+{{/each}}
