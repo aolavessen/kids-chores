@@ -23,6 +23,14 @@ Router.map(function() {
           path: '/:id'
         });
       });
+
+      this.route('rewards', function() {
+        this.route('new');
+
+        this.route('edit', {
+          path: '/:id'
+        });
+      });
     });
     this.route('child', function(){
       this.route('chore');

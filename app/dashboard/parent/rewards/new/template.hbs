@@ -1,0 +1,15 @@
+<h1>New Reward</h1>
+
+{{#simple-form onsubmit=(action saveReward) as |formValues|}}
+  <p>{{input placeholder="Avatar URL" value=formValues.avatar}}</p>
+  <p>{{input placeholder="Name" value=formValues.name}}</p>
+  <p>{{input placeholder="Description" value=formValues.description}}</p>
+  <p>{{input placeholder="Points" value=formValues.points}}</p>
+    <p>
+  {{#link-to "dashboard.parent.rewards.index"}}Cancel{{/link-to}}
+
+  <button>Save</button>
+</p>
+{{/simple-form}}
+
+{{outlet}}
