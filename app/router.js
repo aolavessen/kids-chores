@@ -15,7 +15,13 @@ Router.map(function() {
       this.route('new-chore');
       this.route('new-reward');
       this.route('newChild');
-      this.route('prizes', function() {});
+      this.route('prizes', function() {
+        this.route('new');
+
+        this.route('edit', {
+          path: '/:id'
+        });
+      });
     });
     this.route('child', function(){
       this.route('chore');

@@ -1,3 +1,29 @@
 <h2>All Posts</h2>
 
+{{#link-to "dashboard.parent.prizes.new"}}New Reward{{/link-to}}
+<ul>
+  <li>URL</li>
+  <li>Name</li>
+  <li>Description</li>
+  <li>Points</li>
+  <li></li>
+  <li></li>
+</ul>
+{{#each model as |post|}}
+<ul>
+  <li><img src="{{post.url}}" alt="" width="50"></li>
+  <li>{{post.avatar}}</li>
+  <li>{{post.description}}</li>
+  <li>{{post.points}}</li>
+</ul>
+
+{{#link-to "dashboard.parent.prizes.edit" post.id}}
+<span class="fa fa-pencil"></span>
+{{/link-to}}
+
+<button class="btn" {{action delete post}}>
+<span class="fa fa-trash"></span>
+</button>
+
+{{/each}}
 {{outlet}}
