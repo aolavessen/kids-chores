@@ -1,6 +1,6 @@
 import { moduleFor, test } from 'ember-qunit';
 
-moduleFor('route:dashboard/parent/prizes/new', 'Unit | Route | dashboard/parent/prizes/new', {
+moduleFor('route:dashboard/parent/rewards/new', 'Unit | Route | dashboard/parent/rewards/new', {
   // Specify the other units that are required for this test.
   // needs: ['controller:foo']
 });
