@@ -40,17 +40,21 @@
   animation-duration: 10s;
   animation-name: slidein;
   animation-iteration-count: infinite;
+  animation-direction: alternate;
+
 }
 
 @keyframes slidein {
   from {
     margin-left: 100%;
     width: 300%;
+    opacity: 0;
   }
 
   to {
     margin-left: 0%;
     width: 50%;
+    opacity: 1;
   }
 }
 
