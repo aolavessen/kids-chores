@@ -1,29 +1,29 @@
+<div class="reward-container">
+  <div class="reward-info">
 {{#simple-form class="" onsubmit=(action createNewReward) as |formValues|}}
 
-<p>
-  <label>Picture</label>
-  {{input type="text" name="Pic" value=formValues.avatar}}
+<p class="form-inputs">
+  <label class="input-label">Picture:</label>
+  {{input class="input-field" type="text" name="Pic" value=formValues.avatar}}
 </p>
 
-<p>
-  <label>Name</label>
-  {{input type="text" name="Name" value=formValues.name}}
+<p class="form-inputs">
+  <label class="input-label">Name</label>
+  {{input class="input-field" type="text" name="Name" value=formValues.name}}
 </p>
 
-<p>
-  <label>Description</label>
-  {{input type="text" name="Description" value=formValues.description}}
+<p class="form-inputs">
+  <label class="input-label">Description</label>
+  {{input class="input-field" type="text" name="Description" value=formValues.description}}
 </p>
 
-<p>
-  <label>Points</label>
-  {{input type="text" name="Points" value=formValues.points}}
+<p class="form-inputs">
+  <label class="input-label">Points</label>
+  {{input class="input-field" type="text" name="Points" value=formValues.points}}
 </p>
 
-<p>
-  {{#link-to "dashboard.parent"}}
   <button>Submit</button>
-  {{/link-to}}
-</p>
-
 {{/simple-form}}
+
+</div>
+</div>
