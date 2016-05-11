@@ -1,0 +1,14 @@
+<h1>Edit Chores</h1>
+
+{{#simple-form startingValues=model onsubmit=(action saveEdit model) as |formValues|}}
+  {{input placeholder="name" value=formValues.name}}
+  {{input placeholder="description" value=formValues.description}}
+  {{input placeholder="avatar" value=formValues.avatar}}
+  {{input placeholder="points" value=formValues.points}}
+  {{input placeholder="date" value=formValues.date}}
+  <p>
+    {{#link-to "dashboard.parent.chores.index"}}Cancel{{/link-to}}
+    <button>SAVE</button>
+  </p>
+
+{{/simple-form}}

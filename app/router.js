@@ -15,6 +15,15 @@ Router.map(function() {
       this.route('new-chore');
       this.route('new-reward');
       this.route('newChild');
+      this.route('chore');
+      this.route('chores', function() {
+        this.route('new');
+
+        this.route('edit', {
+          path: '/:id'
+        });
+      });
+
       this.route('rewards', function() {
         this.route('new');
 
