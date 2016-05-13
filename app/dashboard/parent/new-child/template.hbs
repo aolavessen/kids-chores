@@ -13,16 +13,27 @@
 
       <p class="form-inputs">
         <label class="input-label">Point-Total:</label>
-        {{input class="input-field" type="number" placeholder="Point-Total" value=formValues.point-total}}
+        {{input class="input-field" type="number" placeholder="Point-Total" value=formValues.pointTotal}}
       </p>
 
       <p class="form-inputs">
-        <label class="input-label">Chore:</label>
-        {{input class="input-field" type="text" placeholder="Chore" value=formValues.chore}}
+        <label class="input-label">Avatar:</label>
+        {{input class="input-field" type="text" placeholder="Avatar" value=formValues.avatar}}
       </p>
-
+    {{#link-to "dashboard.parent"}}
     <button>Submit</button>
+    {{/link-to}}
     {{/simple-form}}
+{{!--
+    <div>
+      {{#each model as |child|}}
+      <ul><h3>Kidz</h3>
+        <li>{{child.avatar}}</li>
+        <li>{{child.username}}</li>
+        <li>{{child.pointTotal}}</li>
+      </ul>
+      {{/each}}
+    </div> --}}
 
 
   </div>
