@@ -1,0 +1,11 @@
+<h1>Edit Children</h1>
+
+{{#simple-form startingValues=model onsubmit=(action saveEdit model) as |formValues|}}
+  {{input placeholder="userName" value=formValues.userName}}
+  {{input placeholder="password" value=formValues.password}}
+  <p>
+    {{#link-to "dashboard.parent.children"}}Cancel{{/link-to}}
+    <button>SAVE</button>
+  </p>
+
+{{/simple-form}}

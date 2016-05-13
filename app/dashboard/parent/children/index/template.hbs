@@ -1,15 +1,5 @@
-<div class="child-list">
-  <ul>
-    {{#each model as |child|}}
-    <li class="child-item">{{child.username}}</li>
-    <li class="child-item">{{child.password}}</li>
-    {{/each}}
-    {{outlet}}
-  </ul>
-</div>
-
 <h2>Add New Child</h2>
-{{#link-to "dashboard.parent.children"}}Add Child{{/link-to}}
+{{#link-to "dashboard.parent.children.new"}}Add Child{{/link-to}}
 
 <table>
   <thead>
@@ -24,7 +14,7 @@
     {{#each model as |child|}}
       <tr>
         <td>{{child.userName}}</td>
-        <td>{{child.password}}</td>
+        <td>{{chore.password}}</td>
 
         <td>
           {{#link-to "dashboard.parent.children.edit" child.id}}
