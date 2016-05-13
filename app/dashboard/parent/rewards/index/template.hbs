@@ -1,29 +1,36 @@
-<h2>All Rewards</h2>
-
+<h1>Rewards</h1>
 {{#link-to "dashboard.parent.rewards.new"}}New Reward{{/link-to}}
-<ul>
-  <li>URL</li>
-  <li>Name</li>
-  <li>Description</li>
-  <li>Points</li>
-  <li></li>
-  <li></li>
-</ul>
-{{#each model as |post|}}
-<ul>
-  <li><img src="{{post.url}}" alt="" width="50"></li>
-  <li>{{post.avatar}}</li>
-  <li>{{post.description}}</li>
-  <li>{{post.points}}</li>
-</ul>
 
-{{#link-to "dashboard.parent.rewards.edit" post.id}}
-<span class="fa fa-pencil"></span>
-{{/link-to}}
+<table>
+  <thead>
+    <tr>
+      <th>Avatar</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Points</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |reward|}}
+      <tr>
+        <td>{{reward.avatar}}</td>
+        <td>{{reward.name}}</td>
+        <td>{{reward.description}}</td>
+        <td>{{reward.points}}</td>
+        <td>
+          {{#link-to "dashboard.parent.rewards.edit" reward.id}}
+          <span class="fa fa-pencil"></span>
+          {{/link-to}}
+        </td>
+        <td>
+          <button class="button" {{action delete reward}}>
+            <span class="fa fa-trash"></span>
+          </button>
+        </td>
+      </tr>
 
-<button class="btn" {{action delete post}}>
-<span class="fa fa-trash"></span>
-</button>
-
-{{/each}}
-{{outlet}}
+    {{/each}}
+  </tbody>
+</table>
