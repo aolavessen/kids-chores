@@ -1,11 +1,11 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  createNewChore(attr) {
-    const chore=this.store.createRecord(`chore`, attr);
+  newChore(formValues) {
+    const post = this.store.createRecord('chore', formValues);
 
-    chore.save().then(() => {
-      this.transitionToRoute(`dashboard.parent`)
+    post.save().then(() => {
+      this.transitionToRoute(`dashboard.parent.chores`);
     });
   },
 });
