@@ -1,6 +1,7 @@
 <div class="main">
-  <div class="login-form">
+  <div class="parent-login-form">
     {{#simple-form class="form-field" onsubmit=(action loginUser) as |formValues|}}
+    <h2>Parent Login</h2>
       <p class="form-inputs">
         <label class="input-label">Email:</label>
         {{input class="input-field" type="text" placeholder="Email" value=formValues.email}}
@@ -12,7 +13,11 @@
       </p>
 
 
-      <button class="login-btn">Login</button>
+
+      <button class="menu-button">
+        {{#link-to "dashboard.parent"}}LogIn{{/link-to}}
+      </button>
+
 
 
       {{#link-to "sign-up"}}
@@ -20,6 +25,26 @@
       {{/link-to}}
     {{/simple-form}}
   </div>
+  <div class="child-login-form">
+  {{#simple-form class="form-field" onsubmit=(action loginUser) as |formValues|}}
+    <h2>Child Login</h2>
+    <p class="form-inputs">
+      <label class="input-label">Email:</label>
+      {{input class="input-field" type="text" placeholder="Email" value=formValues.email}}
+    </p>
+
+    <p class="form-field">
+      <label class="input-label">Password:</label>
+      {{input class="input-field" type="password" placeholder="Password" value=formValues.password}}
+    </p>
+
+
+    <button class="menu-button">
+      {{#link-to "dashboard.parent"}}LogIn{{/link-to}}
+    </button>
+
+    {{/simple-form}}
+</div>
 </div>
 
 
