@@ -7,11 +7,14 @@
 <div class="content-container">
   <div class="sidebar">
     <div class="sidebar-content">
-      <h2>Kid's Dashboard</h2>
-      <img src="https://s-media-cache-ak0.pinimg.com/236x/03/59/5a/03595aaef122cf3f28cad0f307060493.jpg" alt="">
-      <h2>14 Points</h2>
-      {{outlet}}
-    <ul>
+      {{#each model as |child|}}
+        <h2>{{child.avatar}}</h2>
+        <h2>{{child.username}}</h2>
+          <img src="https://s-media-cache-ak0.pinimg.com/236x/03/59/5a/03595aaef122cf3f28cad0f307060493.jpg" alt="">
+        <h2>{{child.pointTotal}}</h2>
+      {{/each}}
+{{outlet}}
+    {{!-- <ul>
       {{#each model as |chore|}}
       <li class="chore-item">{{chore.name}}</li>
       {{/each}}
@@ -27,5 +30,7 @@
      {{#link-to "dashboard.child.purchase"}}
      <button>Rewards</button>
      {{/link-to}}
+   </div> --}}
    </div>
+ </div>
 </div>
