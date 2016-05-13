@@ -5,10 +5,16 @@
 <div class="parent-header">
   <h2>Parent Header</h2>
 <div class="button-box">
+  {{#link-to "dashboard.parent"}}
+  <button class="menu-button">Home</button>
+  {{/link-to}}
+
 <button class="menu-button">Child</button>
 
-{{#link-to "dashboard.parent.chores.new"}}
 <button class="menu-button">Chores</button>
+
+{{#link-to "dashboard.parent.chores.new"}}
+<button class="menu-button">Add Chores</button>
 {{/link-to}}
 
 {{#link-to "dashboard.parent.new-reward"}}
@@ -48,7 +54,6 @@
   </div>
   <div class="main-content">
     <div class="main-items">
-
 
     <img src="" alt="">
     </div>
