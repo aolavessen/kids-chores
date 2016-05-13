@@ -1,11 +1,12 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  saveEdit(child, formValues) {
-    child.setProperties(formValues);
+  saveChild(formValues) {
+    const child = this.store.createRecord(`child`, formValues);
+
 
     child.save().then(() => {
-      this.transitionToRoute(`dashboard.parent.children`);
+      this.transitionToRoute(`dashboard.parent`);
     });
   },
 });

@@ -1,11 +1,13 @@
 <h2>Add New Child</h2>
-{{#link-to "dashboard.parent.children.new"}}Add Child{{/link-to}}
+{{#link-to "dashboard.parent.children.new"}}New Child{{/link-to}}
 
 <table>
   <thead>
     <tr>
       <th>UserName</th>
       <th>Password</th>
+      <th>Avatar</th>
+      <th>PointTotal</th>
       <th></th>
       <th></th>
     </tr>
@@ -15,9 +17,11 @@
       <tr>
         <td>{{child.userName}}</td>
         <td>{{child.password}}</td>
+        <td>{{child.avatar}}</td>
+        <td>{{child.pointTotal}}</td>
 
         <td>
-          {{#link-to "dashboard.parent.children.edit" child.id}}
+          {{#link-to "dashboard.parent.children.edit" children.id}}
           <span class="fa fa-pencil"></span>
           {{/link-to}}
         </td>
