@@ -18,7 +18,9 @@ Router.map(function() {
       this.route('new-reward', function() {
         this.route('new-reward-item');
       });
-      this.route('newChild');
+      this.route('children', function() {
+        this.route('new');
+      });
       this.route('chore');
       this.route('chores', function() {
         this.route('new');

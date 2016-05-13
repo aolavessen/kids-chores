@@ -1,3 +1,4 @@
+
 <div class="boss-container">
   <div class="child-info">
     {{#simple-form class="" onsubmit=(action createNewChild) as |formValues|}}
@@ -34,10 +35,47 @@
       </ul>
       {{/each}}
     </div>
-
-
-  </div>
+<div class="child-list">
+  <ul>
+    {{#each model as |child|}}
+    <li class="child-item">{{child.username}}</li>
+    <li class="child-item">{{child.password}}</li>
+    {{/each}}
+    {{outlet}}
+  </ul>
 </div>
 
 
-{{outlet}}
+<h2>Add New Child</h2>
+{{#link-to "dashboard.parent.children"}}Add Child{{/link-to}}
+
+<table>
+  <thead>
+    <tr>
+      <th>User Name</th>
+      <th>Password</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |child|}}
+      <tr>
+        <td>{{child.userName}}</td>
+        <td>{{child.password}}</td>
+
+        <td>
+          {{#link-to "dashboard.parent.children.edit" child.id}}
+          <span class="fa fa-pencil"></span>
+          {{/link-to}}
+        </td>
+        <td>
+          <button class="button" {{action delete chore}}>
+            <span class="fa fa-trash"></span>
+          </button>
+        </td>
+      </tr>
+
+    {{/each}}
+  </tbody>
+</table>

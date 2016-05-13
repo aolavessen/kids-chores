@@ -1,12 +1,21 @@
 <div class="about-container">
   <h2>About</h2>
-  <p>this is our about text. We shall discuss the thought process and creation of project.</p>
+  <p>A question parents know all too well.  How do you persuade your child to do chores around the house?
+    There are no easy answers, but we believe we have a solution with Kids Chores.
+    What is Kids Chores? It should be a one stop shop to chore persuasion.
+    With it, you can assign chores to your children. Each chore has an assigned prize.
+    Upon completion, and the parent verification, the child will earn a reward.
+    We have included the ability to customize chores for each child.
+    Your kids will jump at the opportunity to complete tasks and earn real, tangible prizes.
+  </p>
 </div>
 <div class="parent-header">
   <h2>Parent Header</h2>
   <div class="button-box">
 
-    <button class="menu-button">Child</button>
+{{#link-to "dashboard.parent.children"}}
+<button class="menu-button">Children</button>
+{{/link-to}}
 
     {{#link-to "dashboard.parent.chores"}}
       <button class="menu-button">Chores</button>
@@ -23,10 +32,25 @@
   <div class="sidebar">
     <div class="sidebar-content">
       <h2>Parent Dashboard</h2>
+<<<<<<< HEAD
 
       {{outlet}}
 
     </div>
+=======
+        {{outlet}}
+
+      <ul>
+        {{#each model as |chore|}}
+        <li class="chore-item">{{chore.name}}</li>
+        <li class="chore-item">{{chore.description}}</li>
+        <li class="chore-item">{{chore.avatar}}</li>
+        <li class="chore-item">{{chore.points}}</li>
+        <li class="chore-item">{{chore.date}}</li>
+        {{/each}}
+      </ul>
+  </div>
+>>>>>>> cc0c5e3624d03bfa4f0cdec1829bedf1ae817722
   </div>
   <div class="main-content">
     <div class="main-items">

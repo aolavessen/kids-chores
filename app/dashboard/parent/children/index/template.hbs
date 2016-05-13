@@ -1,0 +1,33 @@
+<h2>Add New Child</h2>
+{{#link-to "dashboard.parent.children.new"}}Add Child{{/link-to}}
+
+<table>
+  <thead>
+    <tr>
+      <th>UserName</th>
+      <th>Password</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |child|}}
+      <tr>
+        <td>{{child.userName}}</td>
+        <td>{{child.password}}</td>
+
+        <td>
+          {{#link-to "dashboard.parent.children.edit" child.id}}
+          <span class="fa fa-pencil"></span>
+          {{/link-to}}
+        </td>
+        <td>
+          <button class="button" {{action delete chore}}>
+            <span class="fa fa-trash"></span>
+          </button>
+        </td>
+      </tr>
+
+    {{/each}}
+  </tbody>
+</table>
