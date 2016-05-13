@@ -4,7 +4,7 @@
 <table>
   <thead>
     <tr>
-      <th>User Name</th>
+      <th>UserName</th>
       <th>Password</th>
       <th></th>
       <th></th>
@@ -14,7 +14,7 @@
     {{#each model as |child|}}
       <tr>
         <td>{{child.userName}}</td>
-        <td>{{chore.password}}</td>
+        <td>{{child.password}}</td>
 
         <td>
           {{#link-to "dashboard.parent.children.edit" child.id}}
