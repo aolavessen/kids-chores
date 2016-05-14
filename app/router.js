@@ -20,11 +20,13 @@ Router.map(function() {
       });
       this.route('children', function() {
         this.route('new');
+        this.route('edit', {
+          path:'/:id'
+        });
       });
       this.route('chore');
       this.route('chores', function() {
         this.route('new');
-
         this.route('edit', {
           path: '/:id'
         });
@@ -32,7 +34,6 @@ Router.map(function() {
 
       this.route('rewards', function() {
         this.route('new');
-
         this.route('edit', {
           path: '/:id'
         });

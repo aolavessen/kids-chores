@@ -13,7 +13,7 @@
   <tbody>
     {{#each model as |child|}}
       <tr>
-        <td>{{child.userName}}</td>
+        <td>{{child.username}}</td>
         <td>{{child.password}}</td>
 
         <td>
@@ -22,7 +22,7 @@
           {{/link-to}}
         </td>
         <td>
-          <button class="button" {{action delete chore}}>
+          <button class="button" {{action delete child}}>
             <span class="fa fa-trash"></span>
           </button>
         </td>

@@ -7,7 +7,7 @@ export default Model.extend({
   username: attr(),
   password: attr(),
   pointTotal: attr(),
-  children: belongsTo('child'),
+  parent: belongsTo('parent'),
   purchases: hasMany('purchase'),
   assignments: hasMany('assignment'),
 });
