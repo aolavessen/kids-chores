@@ -54,6 +54,7 @@
     "ember-truth-helpers": "^1.2.0",
     "ember-with-service": "1.1.0",
     "ember-yoga-sass": "1.0.0",
+    "emberx-select": "2.1.2",
     "eslint": "^2.8.0",
     "eslint-config-rtablada": "^1.0.1",
     "liquid-fire": "0.23.0",

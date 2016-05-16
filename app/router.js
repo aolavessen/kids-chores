@@ -28,6 +28,9 @@ Router.map(function() {
         this.route('edit', {
           path: '/:id'
         });
+        this.route('assign', {
+          path: '/:chore_id/assign'
+        });
       });
 
       this.route('rewards', function() {

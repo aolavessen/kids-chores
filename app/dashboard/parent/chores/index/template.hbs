@@ -11,6 +11,7 @@
       <th>Date</th>
       <th></th>
       <th></th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -21,6 +22,11 @@
         <td>{{chore.avatar}}</td>
         <td>{{chore.points}}</td>
         <td>{{chore.date}}</td>
+        <td>
+          {{#link-to "dashboard.parent.chores.assign" chore.id}}
+          Assign
+          {{/link-to}}
+        </td>
         <td>
           {{#link-to "dashboard.parent.chores.edit" chore.id}}
           <span class="fa fa-pencil"></span>
