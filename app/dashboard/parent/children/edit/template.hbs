@@ -2,6 +2,7 @@
 
 {{#simple-form startingValues=model onsubmit=(action editChild model) as |formValues|}}
   {{input placeholder="User Name" value=formValues.username}}
+  {{input placeholder="Email" value=formValues.email}}
   {{input placeholder="Avatar" value=formValues.avatar}}
   {{input placeholder="Password" value=formValues.password}}
   {{input placeholder="Points Total" value=formValues.pointTotal}}

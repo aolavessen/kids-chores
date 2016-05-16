@@ -2,6 +2,7 @@
 
 {{#simple-form onsubmit=(action addChild) as |formValues|}}
   {{input placeholder="Username" value=formValues.username}}
+  {{input placeholder="Email" value=formValues.email}}
   {{input placeholder="Password" value=formValues.password}}
 
   <p>
