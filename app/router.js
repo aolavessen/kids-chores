@@ -8,7 +8,9 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('login');
+  this.route('login', function() {
+    this.route('child');
+  });
   this.route('sign-up');
   this.route('dashboard', function(){
     this.route('logout');
@@ -49,6 +51,7 @@ Router.map(function() {
     });
   });
 
+  this.route('login-child');
 });
 
 export default Router;

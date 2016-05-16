@@ -1,0 +1,13 @@
+<h2>This is the index route</h2>
+<div class="main-box">
+  <div class="parent-box">
+    {{#link-to "login"}}
+    <button>Parent login</button>
+    {{/link-to}}
+  </div>
+  <div class="child-box">
+    {{#link-to "login-child"}}
+    <button>Child login</button>
+    {{/link-to}}
+  </div>
+</div>
