@@ -5,6 +5,7 @@
   <thead>
     <tr>
       <th>UserName</th>
+      <th>Email</th>
       <th>Password</th>
       <th>Avatar</th>
       <th>PointTotal</th>
@@ -16,6 +17,7 @@
     {{#each model as |child|}}
       <tr>
         <td>{{child.username}}</td>
+        <td>{{child.email}}</td>
         <td>{{child.password}}</td>
         <td>{{child.avatar}}</td>
         <td>{{child.pointTotal}}</td>

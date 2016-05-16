@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import Ember from 'ember';
 import config from './config/environment';
 
@@ -8,7 +10,7 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('login');
   this.route('sign-up');
-  this.route('dashboard', {path:'/'}, function(){
+  this.route('dashboard', function(){
     this.route('logout');
     //add .transitionTo to the logout route.js
     this.route('parent', function(){
