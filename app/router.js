@@ -48,6 +48,7 @@ Router.map(function() {
       this.route('purchase');
     });
   });
+
 });
 
 export default Router;

@@ -4,6 +4,7 @@ import { belongsTo, hasMany } from 'ember-data/relationships';
 
 export default Model.extend({
   avatar: attr(),
+  email: attr(),
   username: attr(),
   password: attr(),
   pointTotal: attr(),
