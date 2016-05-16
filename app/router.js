@@ -16,12 +16,6 @@ Router.map(function() {
   this.route('dashboard', function(){
 
     this.route('parent', function(){
-      this.route('new-chore', function() {
-        this.route('new-chore-item');
-      });
-      this.route('new-reward', function() {
-        this.route('new-reward-item');
-      });
       this.route('children', function() {
         this.route('new');
         this.route('edit', {
