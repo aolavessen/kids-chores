@@ -10,7 +10,8 @@ module.exports = function(environment) {
     locationType: 'auto',
 
     'ember-simple-auth' : {
-      routeAfterAuthentication: `dashboard`,
+      routeIfAlreadyAuthenticated: `dashboard`,
+      routeAfterAuthentication: `login`,
     },
 
     EmberENV: {

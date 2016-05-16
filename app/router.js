@@ -12,9 +12,9 @@ Router.map(function() {
     this.route('child');
   });
   this.route('sign-up');
+  this.route('logout');
   this.route('dashboard', function(){
-    this.route('logout');
-    //add .transitionTo to the logout route.js
+
     this.route('parent', function(){
       this.route('new-chore', function() {
         this.route('new-chore-item');
