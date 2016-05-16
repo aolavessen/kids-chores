@@ -6,8 +6,6 @@ export default Model.extend({
   email: attr('string'),
   password: attr('string'),
   username: attr('string'),
-  parents: belongsTo('parent'),
-  purchases: hasMany('purchase'),
-  assignments: hasMany('assignment'),
-  parents: hasMany('child'),
+
+  children: hasMany('child'),
 });
