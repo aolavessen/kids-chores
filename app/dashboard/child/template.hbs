@@ -16,6 +16,17 @@
 
 {{outlet}}
 
+{{model.username}}
+
+<ul>
+  {{#each model.assignments as |a|}}
+    <li>
+      {{a.chore.name}}
+    </li>
+  {{/each}}
+</ul>
+
+
 {{#link-to "dashboard.child.assignment"}}
 <button>Chores</button>
 {{/link-to}}
