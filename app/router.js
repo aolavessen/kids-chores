@@ -19,7 +19,11 @@ Router.map(function() {
       this.route('children', function() {
         this.route('new');
         this.route('edit', {
-          path:'/:id'
+          path:'/:id/edit'
+        });
+
+        this.route('detail', {
+          path: '/:id'
         });
       });
       this.route('chore');

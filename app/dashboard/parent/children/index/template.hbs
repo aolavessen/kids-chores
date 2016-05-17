@@ -11,6 +11,7 @@
       <th>PointTotal</th>
       <th></th>
       <th></th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -22,8 +23,14 @@
         <td>{{child.avatar}}</td>
         <td>{{child.pointTotal}}</td>
 
+
         <td>
-          {{#link-to "dashboard.parent.children.edit" children.id}}
+          {{#link-to "dashboard.parent.children.detail" child.id}}
+          View Details
+          {{/link-to}}
+        </td>
+        <td>
+          {{#link-to "dashboard.parent.children.edit" child.id}}
           <span class="fa fa-pencil"></span>
           {{/link-to}}
         </td>
