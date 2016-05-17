@@ -15,6 +15,13 @@
         <h2>{{model.pointTotal}}</h2>
 
 {{outlet}}
+
+{{#link-to "dashboard.child.assignment"}}
+<button>Chores</button>
+{{/link-to}}
+{{#link-to "dashboard.child.store"}}
+<button>Rewards</button>
+{{/link-to}}
     {{!-- <ul>
       {{#each model as |chore|}}
       <li class="chore-item">{{chore.name}}</li>
