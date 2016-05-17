@@ -39,11 +39,21 @@ Router.map(function() {
           path: '/:id'
         });
       });
+
+      this.route('reward', {
+        path: '/:reward_id'
+      }, function() {
+        this.route('assign', {
+          path: '/:reward_id'
+        });
+      });
     });
     this.route('child', function(){
       this.route('chore');
       this.route('store');
-      this.route('assignment');
+      this.route('assignment', function() {
+        this.route('edit');
+      });
       this.route('purchase');
     });
   });

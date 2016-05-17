@@ -6,6 +6,6 @@ export default Model.extend({
   points: attr(),
   name: attr(),
   reward: attr(),
-  purchase: belongsTo('child'),
-  purchase: hasMany('reward'),
+  child: belongsTo('child'),
+  reward: belongsTo('reward'),
 });

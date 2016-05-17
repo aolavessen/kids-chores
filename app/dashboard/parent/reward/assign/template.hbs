@@ -1,0 +1,14 @@
+{{#simple-form onsubmit=(action assignReward model.reward) as |formValues|}}
+  {{#x-select value=formValues.child}}
+    {{#x-option value=null}}Please Select A RugRat{{/x-option}}
+    {{#each model.children as |child|}}
+      {{#x-option value=child}}
+        {{child.username}}
+      {{/x-option}}
+    {{/each}}
+  {{/x-select}}
+
+  <button>Assign</button>
+{{/simple-form}}
+
+{{outlet}}

@@ -1,10 +1,31 @@
-<h1>{{assignment.name}}</h1>
+{{!-- <h1>{{assignment.name}}</h1>
 
-
-
-{{#each model as |assignment|}}
+<form class="form" {{action saveAssignment model newAssignment on="submit"}}>
+<ul>
+{{#each model.reward as |assignment|}}
+<li> {{action markDone assignment then assignment.done on="click"}}>
+  {{#if assignment.done}}
+  <span class="checkbox">
+    {{fa-icon "fa-check-square-o"}}
+  </span>
+  <span class="assignment">
+    {{reward.name}}
+  </span>
+  {{else}}
+  <span class="checkbox">
+    {{fa-icon "fa-square-o"}}
+  </span>
+  {{/if}}
+</li>
+  {{!-- {{/each}} --}}
+{{!-- </ul> --}}
 <h1> {{assignment.date}}</h1>
 <h1> {{assignment.done}}</h1>
 <h1> {{assignment.approve}}</h1>
 
+
+<button>Submit</button>
+
 {{/each}}
+</ul>
+</form> --}}
