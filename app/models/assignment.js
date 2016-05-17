@@ -3,6 +3,9 @@ import attr from 'ember-data/attr';
 import { belongsTo, hasMany } from 'ember-data/relationships';
 
 export default Model.extend({
+  date: attr(),
+  done: attr('boolean'),
+  approved: attr('boolean'),
   child: belongsTo('child'),
   chore: belongsTo('chore'),
 });

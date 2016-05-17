@@ -7,7 +7,7 @@ export default Ember.Controller.extend({
 
     assign.save()
       .then(() => {
-        this.transitionToRoute(`chores`);
+        this.transitionToRoute(`dashboard.parent.chores`);
       });
   },
 });
