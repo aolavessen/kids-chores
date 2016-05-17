@@ -1,5 +1,10 @@
 <h1>{{assignment.name}}</h1>
 
-<ul>chore list
-  <li>list item</li>
-</ul>
+
+
+{{#each model as |assignment|}}
+<h1> {{assignment.date}}</h1>
+<h1> {{assignment.done}}</h1>
+<h1> {{assignment.approve}}</h1>
+
+{{/each}}
