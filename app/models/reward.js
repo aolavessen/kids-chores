@@ -8,4 +8,5 @@ export default Model.extend({
   description: attr(),
   points: attr(),
   reward: belongsTo('purchase'),
+  reward: belongsTo('child'),
 });

@@ -20,6 +20,9 @@
         <td>{{reward.description}}</td>
         <td>{{reward.points}}</td>
         <td>
+          {{#link-to "dashboard.parent.reward.assign" reward.id}}
+          Assign
+          {{/link-to}}
           {{#link-to "dashboard.parent.rewards.edit" reward.id}}
           <span class="fa fa-pencil"></span>
           {{/link-to}}
