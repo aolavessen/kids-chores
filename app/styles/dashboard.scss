@@ -1,12 +1,15 @@
 .about-container {
   text-align: center;
   margin: auto;
+  padding-left: 5rem;
+  padding-right: 5rem;
 }
 
 .parent-header {
   width: 100%;
   margin: auto;
   background: #e7bd3b;
+  overflow: auto;
 }
 
 .dashboard-container {
@@ -16,8 +19,12 @@
   background: #e2f1f6;
 }
 
+.row {
+background: #e2f1f6;
+box-shadow: 10px 5px 5px black;
+}
 .content-container {
-  max-width: 75rem;
+  // max-width: 75rem;
   overflow: auto;
   display: flex;
   margin: auto;
@@ -25,10 +32,11 @@
   background: #e2f1f6;
   box-shadow: 10px 5px 5px black;
 
+
 }
 
 .sidebar {
-  min-width: 30rem;
+  // min-width: 30rem;
   padding-bottom: 1rem;
   padding-left: 2rem;
 
@@ -38,7 +46,8 @@
 .main-content {
   padding-bottom: 1rem;
   padding-left: 5rem;
-
+  background: #e2f1f6;
+  overflow: auto;
 }
 
 .main-items {
@@ -46,4 +55,8 @@
   padding-left: 2rem;
 
   // background: pink;
+}
+
+.child-items {
+  padding-left: 2rem;
 }

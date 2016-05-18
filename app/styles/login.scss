@@ -5,21 +5,22 @@
 .parent-login-form {
   display: flex;
   justify-content: center;
-  width: 50%;
+  // width: 50%;
   padding-bottom: 2rem;
   padding-left: 3rem;
-  background: brown;
+  background: red;
   // text-align: center;
-
+  box-shadow: 10px 5px 5px black;
 }
 
 .child-login-form {
   display: flex;
   justify-content: center;
-  width: 50%;
+  // width: 50%;
   padding-bottom: 2rem;
   padding-left: 3rem;
-  background: brown;
+  background: red;
+  box-shadow: 10px 5px 5px black;
 }
 
 .big-container {
