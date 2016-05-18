@@ -8,10 +8,13 @@ export default Ember.Controller.extend({
       this.transitionToRoute(`dashboard.parent.child`);
     });
   },
-  isComplete(assignment) {
-    const disabled = assignment.isComplete;
-    assignment.toggleProperty(`done`);
+  isComplete(assignment, child) {
+    assignment.toggleProperty(`approve`);
     assignment.save();
-  }
 
+    var points = chore.points
+    // Look up points from the chore
+    // Increase child point total
+    // Save child
+  }
 });
