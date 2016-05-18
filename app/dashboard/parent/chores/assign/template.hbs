@@ -1,14 +1,13 @@
 {{outlet}}
 
 {{#simple-form onsubmit=(action assignChore model.chore) as |formValues|}}
-  {{#x-select value=formValues.child}}
-    {{#x-option value=null}}Please Select A RugRat{{/x-option}}
-    {{#each model.children as |child|}}
-      {{#x-option value=child}}
-        {{child.username}}
-      {{/x-option}}
-    {{/each}}
-  {{/x-select}}
+  {{model.children.length}}
+  {{md-select content=model.children
+    value=formValues.childId
+    label="Child"
+    prompt="Please choose a RugRat..."
+    optionLabelPath="content.username"
+    optionValuePath="content.id" class="col s12"}}
 
   <button>Assign</button>
 {{/simple-form}}
