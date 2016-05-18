@@ -1,7 +1,15 @@
-  <ul>
-    {{#each model as |purchase|}}
-    <li class="chore-item">{{purchase.points}}</li>
-    <li class="chore-item">{{purchase.name}}</li>
-    <li class="chore-item">{{purchase.reward}}</li>
-    {{/each}}
-  </ul>
+Rewards Page - Pick your item below
+{{model.child.name}}
+{{model.chore.name}}
+<ul>
+  {{#each model.assignments as |a|}}
+    <li>
+      {{a.id}} - {{a.chore.name}} - {{a.done}} - {{a.date}} - {{a.approved}}
+      {{!-- <li class="assignment-item" >{{assignments.name}}</li> --}}
+      <td>
+      <button class="waves-effect waves-light btn " {{action isComplete a preventDefault=false}}>Complete</button>
+    </td>
+
+    </li>
+  {{/each}}
+</ul>

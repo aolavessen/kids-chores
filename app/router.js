@@ -55,8 +55,8 @@ Router.map(function() {
     this.route('child', function(){
       this.route('chore');
       this.route('store');
-      this.route('assignment', function() {
-        this.route('edit');
+      this.route('assignment', function(){
+        // this.route('edit');
       });
       this.route('purchase');
     });

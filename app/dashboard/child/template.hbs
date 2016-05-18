@@ -2,70 +2,26 @@
   <div class="dashboard-container_items">
     <h2 class="dashboard-text dashboard-item">Child Dashboard</h2>
   </div>
-  {{#link-to "logout"}}
-  <button class="waves-effect waves-light btn">logout</button>
-  {{/link-to}}
+
+    {{#link-to "dashboard.child.store"}}
+      <button class="waves-effect waves-light btn">Rewards</button>
+    {{/link-to}}
+    {{#link-to "dashboard.child.assignment"}}
+      <button class="waves-effect waves-light btn">Chores List</button>
+    {{/link-to}}
+    {{#link-to "logout"}}
+      <button class="waves-effect waves-light btn">logout</button>
+    {{/link-to}}
 </div>
 
 <div class="content-container">
   <div class="sidebar">
     <div class="sidebar-content">
-        <h2>{{model.username}}</h2>
-
-        <h2>{{model.pointTotal}}</h2>
-
-{{outlet}}
-
-<ul>
-  {{#each model.assignments as |a|}}
-    <li>
-      {{a.chore.name}}
-    </li>
-  {{/each}}
-</ul>
-
-<ul>
-  {{#each model.assignments as |a|}}
-    <li>
-      {{a.id}} - {{a.chore.name}}
-      <li class="assignment-item" >{{assignment.name}}</li>
-      <td>
-      <button class="waves-effect waves-light btn " {{action isComplete a preventDefault=false}}>Complete</button>
-    </td>
-    <td>
-      <button class="button" {{action delete a}}>
-        <span class="fa fa-trash"></span>
-      </button>
-    </td>
-    </li>
-  {{/each}}
-</ul>
-
-
-
-{{#link-to "dashboard.child.assignment"}}
-<button class="waves-effect waves-light btn">Chores</button>
-{{/link-to}}
-{{#link-to "dashboard.child.store"}}
-<button class="waves-effect waves-light btn">Rewards</button>
-{{/link-to}}
-    {{!-- <ul>
-      {{#each model as |chore|}}
-      <li class="chore-item">{{chore.name}}</li>
-      {{/each}}
-    </ul>
+      <h2>{{model.username}}</h2>
+      <h2>{{model.pointTotal}}</h2>
+    </div>
   </div>
-  </div>
-   <div class="">
-     {{#link-to "dashboard.child.assignment"}}
-       <button>Chorez</button>
-     {{/link-to}}
-   </div>
-   <div class="">
-     {{#link-to "dashboard.child.purchase"}}
-     <button>Rewards</button>
-     {{/link-to}}
-   </div> --}}
-   </div>
- </div>
+
+    {{outlet}}
+
 </div>
