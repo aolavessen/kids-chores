@@ -1,7 +1,13 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model({ id }) {
-    return this.store.findRecord(`child`, id);
-  }
+  session: Ember.inject.service(),
+
+  model() {
+    const childId = this.get(`session.data.authenticated.user.id`);
+
+    return this.store.findRecord(`child`, childId);
+  },
+
+
 });

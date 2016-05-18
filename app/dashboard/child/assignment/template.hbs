@@ -1,11 +1,18 @@
-List of Chores for each Kid
-
-{{model.username}}
+List of Chores for {{model.username}}
 
 <ul>
   {{#each model.assignments as |a|}}
     <li>
-      {{a.chore.name}}
+      {{a.id}} - {{a.chore.name}}
+      <li class="assignment-item">{{assignment.name}}</li>
+      <td>
+        <button class="waves-effect waves-light btn" {{action isComplete a preventDefault=false}}>Complete</button>
+      </td>
+      <td>
+        <button class="button" {{action delete a}}>
+          <span class="fa fa-trash"></span>
+        </button>
+      </td>
     </li>
   {{/each}}
 </ul>
