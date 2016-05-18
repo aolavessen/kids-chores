@@ -1,3 +1,4 @@
+<div class="sign-up">
 {{#simple-form class="" onsubmit=(action createNewUser) as |formValues|}}
 
   <p>
@@ -16,7 +17,10 @@
   </p>
 
   <p>
-    <button class="menu-button">Submit</button>
+    <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+    <i class="material-icons right">send</i>
+    </button>
   </p>
 
 {{/simple-form}}
+</div>
