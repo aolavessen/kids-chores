@@ -2,6 +2,9 @@
   display: flex;
 }
 
+.row {
+  overflow: auto;
+}
 .parent-login-form {
   display: flex;
   justify-content: center;
