@@ -9,12 +9,14 @@ export default Ember.Controller.extend({
     });
   },
   isComplete(assignment, child) {
-    assignment.toggleProperty(`approve`);
+    assignment.toggleProperty(`approved`);
     assignment.save();
 
-    var points = chore.points
     // Look up points from the chore
+    const points = assignment.get(`chore.points`);
     // Increase child point total
+    child.incrementProperty('pointTotal', points);
     // Save child
+    child.save();
   }
 });
