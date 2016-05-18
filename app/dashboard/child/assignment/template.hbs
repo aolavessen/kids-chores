@@ -1,9 +1,9 @@
-List of Chores for {{model.username}}
+Hello {{model.username}}, this is what you have to do
 
 <ul>
   {{#each model.assignments as |a|}}
     <li>
-      {{a.id}} - {{a.chore.name}}
+      {{a.chore.name}}
       <li class="assignment-item">{{assignment.name}}</li>
       <td>
         <button class="waves-effect waves-light btn" {{action isComplete a preventDefault=false}}>Complete</button>
