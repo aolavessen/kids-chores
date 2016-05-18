@@ -18,21 +18,18 @@
 }
 
 .logo {
+  margin: auto;
   display: block;
-  width: 100px;
+  width: 150px;
   height: 100px;
-  transition: width 2s, height 2s, background-color 2s, transform 2s;
-  border-width: 1px;
-  border-style: solid;
-  background-color: blue;
-  -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+  transition: width 1s, height 1s, background-color 2s, transform 1s;
+  -webkit-transition: width 1s, height 1s, background-color 1s, -webkit-transform 1s;
 }
 
 .logo:hover {
-  width: 200px;
+  width: 250px;
   height: 200px;
   transform: rotate(360deg);
-  background-color: white;
   -webkit-transform: rotate(360deg);
 }
 
