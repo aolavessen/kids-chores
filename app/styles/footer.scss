@@ -9,12 +9,12 @@
   display: flex;
   flex-direction: column;
   margin: auto;
-  background-image: url('http://thumbs.dreamstime.com/x/many-active-kids-kite-happy-boys-girls-run-park-33996688.jpg');
-  color: black;
+  // background-image: url('http://thumbs.dreamstime.com/x/many-active-kids-kite-happy-boys-girls-run-park-33996688.jpg');
+  color: grey;
 
-  font-family: fantasy;
+  // font-family: fantasy;
   font-size: 2.4rem;
-  //  background: #9696ab;
+  background: #9696ab;
 }
 
 .logo {
@@ -33,30 +33,30 @@
   -webkit-transform: rotate(360deg);
 }
 
-.title {
-  line-height: 2.4rem;
-
-  animation-name: slidein;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-@keyframes slidein {
-  from {
-    width: 300%;
-    margin-left: 100%;
-    font-size: 0.65rem;
-    opacity: 0;
-  }
-
-  to {
-    width: 50%;
-    margin-left: 0%;
-    font-size: 2.2rem;
-    opacity: 1;
-  }
-}
+// .title {
+//   line-height: 2.4rem;
+//
+//   animation-name: slidein;
+//   animation-duration: 10s;
+//   animation-iteration-count: infinite;
+//   animation-direction: alternate;
+// }
+//
+// @keyframes slidein {
+//   from {
+//     width: 300%;
+//     margin-left: 100%;
+//     font-size: 0.65rem;
+//     opacity: 0;
+//   }
+//
+//   to {
+//     width: 50%;
+//     margin-left: 0%;
+//     font-size: 2.2rem;
+//     opacity: 1;
+//   }
+// }
 
 .footer-information {
   display: flex;

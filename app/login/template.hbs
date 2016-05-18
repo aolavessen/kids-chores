@@ -1,5 +1,5 @@
+<div class="big-container">
 
-<div class="main">
   <div class="parent-login-form">
     {{#simple-form class="form-field" onsubmit=(action loginParent) as |formValues|}}
       <h2>Parent Login</h2>
@@ -17,13 +17,15 @@
 
       <button class="waves-effect waves-light btn">Log In</button>
 
-
+      {{#link-to "index"}}
+      <button class="waves-effect waves-light btn">Cancel</button>
+      {{/link-to}}
 
       {{#link-to "sign-up"}}SignUp{{/link-to}}
     {{/simple-form}}
   </div>
-</div>
 
 <div class="parent-pic">
-  <img src="" alt="">
+  <img src="kclogo1.png" alt="">
+</div>
 </div>
