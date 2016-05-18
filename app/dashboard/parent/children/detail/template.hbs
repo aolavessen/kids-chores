@@ -1,6 +1,7 @@
 {{outlet}}
 
-{{model.username}}
+<h2>@{{model.username}}</h2>
+
 <table>
   <thead>
     <tr>
@@ -10,14 +11,26 @@
   </tr>
 </thead>
 <tbody>
-  {{#each model.assignments as |a|}}
+  {{#each model.assignments as |assignment|}}
     <tr>
-      <td>{{a.chore.name}}</td>
-      <i class="tiny material-icons">thumb_up</i>
-      <i class="tiny material-icons">thumb_down</i>
-      <td>{{assignment.complete}}</td>
-      <a class="btn-floating btn-tiny waves-effect waves-light green"{{action isComplete a preventDefault=false}}><i class="material-icons">add</i></a>
-      <td>{{assignment.approve}}</td>
+      <td>{{assignment.chore.name}}</td>
+
+      <td>
+        {{#if assignment.done}}
+        <i class="tiny material-icons">thumb_up</i>
+        {{else}}
+        <i class="tiny material-icons">thumb_down</i>
+        {{/if}}
+      </td>
+      <td>
+        {{#if assignment.done}}
+          {{#if assignment.approved}}
+            <i class="tiny material-icons">thumb_up</i>
+          {{else}}
+            <a class="btn-floating btn-tiny waves-effect waves-light green" {{action isComplete assignment model preventDefault=false}}><i class="material-icons">add</i></a>
+          {{/if}}
+        {{/if}}
+      </td>
     </tr>
 
   {{/each}}
