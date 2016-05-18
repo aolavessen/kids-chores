@@ -7,6 +7,11 @@ module.exports = function(defaults) {
     babel: {
       includePolyfill: true,
     },
+    sassOptions: {
+      includePaths: [
+        'bower_components/materialize/sass'
+      ],
+    },
   });
 
   // Use `app.import` to add additional libraries to the generated
