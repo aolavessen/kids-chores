@@ -1,14 +1,28 @@
 {{outlet}}
 
 {{model.username}}
-
-<ul>
+<table>
+  <thead>
+    <tr>
+    <th>Chore Name</th>
+    <th>Complete</th>
+    <th>Approve</th>
+  </tr>
+</thead>
+<tbody>
   {{#each model.assignments as |a|}}
-    <li>
-      {{a.chore.name}}
-    </li>
+    <tr>
+      <td>{{a.chore.name}}</td>
+      <i class="tiny material-icons">thumb_up</i>
+      <i class="tiny material-icons">thumb_down</i>
+      <td>{{assignment.complete}}</td>
+      <a class="btn-floating btn-tiny waves-effect waves-light green"{{action isComplete a preventDefault=false}}><i class="material-icons">add</i></a>
+      <td>{{assignment.approve}}</td>
+    </tr>
+
   {{/each}}
-</ul>
+</tbody>
 {{#link-to "dashboard.parent"}}
 <button class="waves-effect waves-light btn">Return</button>
 {{/link-to}}
+</table>
