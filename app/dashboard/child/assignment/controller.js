@@ -10,6 +10,8 @@ export default Ember.Controller.extend({
   isComplete(assignment) {
     const disabled = assignment.isComplete;
     assignment.toggleProperty(`done`);
-    assignment.save();
+    assignment.save().then(() => {
+      this.transitionToRoute(`dashboard.child.assignment`);
+    });
   }
 });
