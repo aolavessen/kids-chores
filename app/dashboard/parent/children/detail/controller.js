@@ -19,6 +19,11 @@ export default Ember.Controller.extend({
     child.save();
   },
 
+  isComplete(purchase, reward) {
+    purchase.toggleProperty(`fulfilled`);
+    fulfilled.save();
+  },
+
   delete(assignment) {
     if (confirm('Are you sure you want to delete?')) {
       assignment.destroyRecord();
