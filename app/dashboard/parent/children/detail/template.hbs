@@ -30,7 +30,7 @@
             {{#if assignment.approved}}
               <i class="tiny material-icons">thumb_up</i>
             {{else}}
-              <a class="btn-floating btn-tiny waves-effect waves-light green" {{action isComplete assignment model preventDefault=false}}><i class="material-icons">add</i></a>
+              <a class="btn-floating btn-tiny waves-effect waves-light green" {{action assignmentIsApproved assignment model preventDefault=true}}><i class="material-icons">add</i></a>
             {{/if}}
           {{/if}}
         </td>
@@ -64,7 +64,7 @@
           {{#if purchase.fulfilled}}
             <i class="tiny material-icons">thumb_up</i>
           {{else}}
-            <a class="btn-floating btn-tiny waves-effect waves-light green" {{action isComplete purchase model preventDefault=false}}><i class="material-icons">add</i></a>
+            <a class="btn-floating btn-tiny waves-effect waves-light green" {{action purchaseIsFulfilled purchase preventDefault=true}}><i class="material-icons">add</i></a>
           {{/if}}
         </td>
 
