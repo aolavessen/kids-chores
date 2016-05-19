@@ -10,8 +10,8 @@ export default Ember.Route.extend({
     return this.store.findRecord(`child`, childId);
   },
 
-  // afterModel(model) {
-  //   // Sets the current user to the logged in parent!
-  //   this.set(`currentUser.user`, model);
-  // },
+  afterModel(model) {
+    // Sets the current user to the logged in parent!
+    this.set(`currentUser.user`, model);
+  },
 });
