@@ -1,24 +1,23 @@
-Rewards Page - Pick your item below
-<h1>Rewards</h1>
+Pick your item below!
+<h1>Rewards Store</h1>
 
 <table>
   <thead>
     <tr>
     <th>Reward</th>
     <th>Points</th>
-    <th>Quantity</th>
+    {{!-- <th>Quantity</th> --}}
     <th>Select</th>
   </tr>
 </thead>
 <tbody>
-  {{#each model.rewards as |reward|}}
+  {{#each model as |reward|}}
     <tr>
       <td>{{reward.name}}</td>
       <td>{{reward.points}}</td>
-      <td></td>
-      <td></td>
+      {{!-- <td>{{input}}</td> --}}
+      <td><button {{action buyReward reward}}>Buy</button></td>
     </tr>
-
   {{/each}}
 </tbody>
 </table>
