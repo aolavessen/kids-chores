@@ -15,7 +15,7 @@ export default Ember.Controller.extend({
     // Look up points from the chore
     const points = assignment.get(`chore.points`);
     // Increase child point total
-    child.incrementProperty('pointTotal', points);
+    child.incrementProperty(`pointTotal`, points);
     // Save child
     child.save();
   },
