@@ -1,7 +1,7 @@
 {{outlet}}
 
 {{#simple-form onsubmit=(action assignChore model.chore) as |formValues|}}
-  {{model.children.length}}
+  {{!-- {{model.children.length}} --}}
   {{md-select content=model.children
     value=formValues.childId
     label="Child"
