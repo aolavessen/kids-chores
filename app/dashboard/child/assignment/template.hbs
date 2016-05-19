@@ -3,10 +3,12 @@
 <ul>
   {{#each model.assignments as |assignment|}}
     <li>
-      {{assignment.chore.name}}
-      <li class="assignment-item">{{assignment.name}}</li>
-      {{assignment.chore.description}}
-      <li class="assignment-item">{{assignment.description}}</li>
+
+      <td>{{a.chore.name}}</td>
+      {{!-- <li class="assignment-item">{{a.assignment.name}}</li> --}}
+      <td>{{a.chore.description}}</td>
+      {{!-- <li class="assignment-item">{{a.assignment.description}}</li> --}}
+
       <td>
         {{#if assignment.done}}
         <i class="medium material-icons">thumb_up</i>
