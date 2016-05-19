@@ -3,10 +3,10 @@
 <ul>
   {{#each model.assignments as |a|}}
     <li>
-      {{a.chore.name}}
-      <li class="assignment-item">{{assignment.name}}</li>
-      {{a.chore.description}}
-      <li class="assignment-item">{{assignment.description}}</li>
+      <td>{{a.chore.name}}</td>
+      {{!-- <li class="assignment-item">{{a.assignment.name}}</li> --}}
+      <td>{{a.chore.description}}</td>
+      {{!-- <li class="assignment-item">{{a.assignment.description}}</li> --}}
       <td>
         <button class="waves-effect waves-light btn" {{action isComplete a preventDefault=false}}>Complete</button>
       </td>
