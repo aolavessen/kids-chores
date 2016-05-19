@@ -17,5 +17,11 @@ export default Ember.Controller.extend({
     child.incrementProperty('pointTotal', points);
     // Save child
     child.save();
-  }
+  },
+
+  delete(assignment) {
+    if (confirm('Are you sure you want to delete?')) {
+      assignment.destroyRecord();
+    }
+  },
 });

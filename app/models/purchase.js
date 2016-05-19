@@ -3,9 +3,6 @@ import attr from 'ember-data/attr';
 import { belongsTo, hasMany } from 'ember-data/relationships';
 
 export default Model.extend({
-  points: attr(),
-  name: attr(),
-  reward: attr(),
   child: belongsTo('child'),
   reward: belongsTo('reward'),
 });

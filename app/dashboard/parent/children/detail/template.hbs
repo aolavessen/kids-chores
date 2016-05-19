@@ -2,40 +2,80 @@
 
 <h2>{{model.username}}</h2>
 
+<h2>Current Chores</h2>
+
 <table>
   <thead>
     <tr>
-    <th>Chore Name</th>
-    <th>Complete</th>
-    <th>Approve</th>
-  </tr>
-</thead>
-<tbody>
-  {{#each model.assignments as |assignment|}}
-    <tr>
-      <td>{{assignment.chore.name}}</td>
+      <th>Chore Name</th>
+      <th>Complete</th>
+      <th>Approve</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model.assignments as |assignment|}}
+      <tr>
+        <td>{{assignment.chore.name}}</td>
 
-      <td>
-        {{#if assignment.done}}
-        <i class="tiny material-icons">thumb_up</i>
-        {{else}}
-        <i class="tiny material-icons">thumb_down</i>
-        {{/if}}
-      </td>
-      <td>
-        {{#if assignment.done}}
-          {{#if assignment.approved}}
+        <td>
+          {{#if assignment.done}}
             <i class="tiny material-icons">thumb_up</i>
           {{else}}
-            <a class="btn-floating btn-tiny waves-effect waves-light green" {{action isComplete assignment model preventDefault=false}}><i class="material-icons">add</i></a>
+            <i class="tiny material-icons">thumb_down</i>
           {{/if}}
-        {{/if}}
-      </td>
-    </tr>
+        </td>
+        <td>
+          {{#if assignment.done}}
+            {{#if assignment.approved}}
+              <i class="tiny material-icons">thumb_up</i>
+            {{else}}
+              <a class="btn-floating btn-tiny waves-effect waves-light green" {{action isComplete assignment model preventDefault=false}}><i class="material-icons">add</i></a>
+            {{/if}}
+          {{/if}}
+        </td>
 
-  {{/each}}
-</tbody>
-{{#link-to "dashboard.parent"}}
-<button class="waves-effect waves-light btn">Return</button>
-{{/link-to}}
+        <td>
+          <button class="button" {{action delete assignment}}>
+            <span class="fa fa-trash"></span>
+          </button>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+<h2>Rewards</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Reward Name</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model.purchases as |purchase|}}
+      <tr>
+        <td>{{purchase.reward.name}}</td>
+
+        <td>
+          {{#if purchase.fulfilled}}
+            <i class="tiny material-icons">thumb_up</i>
+          {{else}}
+            <a class="btn-floating btn-tiny waves-effect waves-light green" {{action isComplete purchase model preventDefault=false}}><i class="material-icons">add</i></a>
+          {{/if}}
+        </td>
+
+        <td>
+          <button class="button" {{action delete purchase}}>
+            <span class="fa fa-trash"></span>
+          </button>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+  {{#link-to "dashboard.parent"}}
+    <button class="waves-effect waves-light btn">Return</button>
+  {{/link-to}}
 </table>
