@@ -7,7 +7,8 @@ export default Ember.Controller.extend({
       this.transitionToRoute(`dashboard.parent.child`);
     });
   },
-  isComplete(assignment, child) {
+
+  assignmentIsApproved(assignment, child) {
     assignment.toggleProperty(`approved`);
     assignment.save();
 
@@ -19,14 +20,14 @@ export default Ember.Controller.extend({
     child.save();
   },
 
-  isComplete(purchase, reward) {
+  purchaseIsFulfilled(purchase) {
     purchase.toggleProperty(`fulfilled`);
-    fulfilled.save();
+    purchase.save();
   },
 
-  delete(assignment) {
+  delete(item) {
     if (confirm('Are you sure you want to delete?')) {
-      assignment.destroyRecord();
+      item.destroyRecord();
     }
   },
 });
