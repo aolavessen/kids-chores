@@ -18,13 +18,20 @@ $roboto-font-path: '../assets/';
 
 
 .header-container {
-
-  background: #e7bd3b;
+  color: white;
+  background: #541D37;
 }
 
 .header-container_items {
   display: flex;
   justify-content: center;
+}
+
+.boss-box {
+  background: #e2f1f6;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  box-shadow: 10px 5px 5px black;
 }
 
 .text-box {
@@ -41,4 +48,10 @@ $roboto-font-path: '../assets/';
   justify-content: space-between;
   padding-right: 5rem;
   padding-left: 5rem;
+
+}
+
+.about-container {
+  color: white;
+  background: #541D37;
 }
