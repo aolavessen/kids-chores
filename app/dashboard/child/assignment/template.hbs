@@ -1,14 +1,20 @@
 <h5>Hello {{model.username}}, this is what you have to do</h5>
 
 <ul>
-  {{#each model.assignments as |a|}}
+  {{#each model.assignments as |assignment|}}
     <li>
+
       <td>{{a.chore.name}}</td>
       {{!-- <li class="assignment-item">{{a.assignment.name}}</li> --}}
       <td>{{a.chore.description}}</td>
       {{!-- <li class="assignment-item">{{a.assignment.description}}</li> --}}
+
       <td>
-        <button class="waves-effect waves-light btn" {{action isComplete a preventDefault=false}}>Complete</button>
+        {{#if assignment.done}}
+        <i class="medium material-icons">thumb_up</i>
+        {{else}}
+        <button class="waves-effect waves-light btn" {{action isComplete assignment preventDefault=false}}>Complete</button>
+        {{/if}}
       </td>
 
     </li>
