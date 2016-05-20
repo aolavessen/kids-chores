@@ -4,10 +4,10 @@
   {{#each model.assignments as |assignment|}}
     <li>
 
-      <td>{{a.chore.name}}</td>
-      {{!-- <li class="assignment-item">{{a.assignment.name}}</li> --}}
-      <td>{{a.chore.description}}</td>
-      {{!-- <li class="assignment-item">{{a.assignment.description}}</li> --}}
+      <td>{{assignment.chore.name}}</td>
+      <li class="assignment-item">{{a.assignment.name}}</li>
+      <td>{{assignment.chore.description}}</td>
+      <li class="assignment-item">{{a.assignment.description}}</li>
 
       <td>
         {{#if assignment.done}}
