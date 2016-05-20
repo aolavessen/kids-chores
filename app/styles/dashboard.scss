@@ -19,6 +19,7 @@
 
   margin: auto;
   background: #e2f1f6;
+  overflow: auto;
 }
 
 // .row {
@@ -51,7 +52,7 @@
 }
 
 .main-items {
-
+  overflow: auto;
   padding-left: 2rem;
 
   // background: pink;
