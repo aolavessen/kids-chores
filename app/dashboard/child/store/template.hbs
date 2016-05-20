@@ -18,7 +18,9 @@
       <td>{{reward.points}}</td>
       <td>{{reward.description}}</td>
       {{!-- <td>{{input}}</td> --}}
-      <td><button {{action buyReward reward}}>Buy</button></td>
+      <td>
+        <button class="waves-effect waves-light btn" {{action buyReward reward}}>Buy</button>
+      </td>
     </tr>
   {{/each}}
 </tbody>

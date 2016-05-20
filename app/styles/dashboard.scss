@@ -6,10 +6,12 @@
 }
 
 .parent-header {
+  position: relative;
   width: 100%;
   margin: auto;
   background: #048A81;
   overflow: auto;
+  z-index: 2;
 }
 
 .dashboard-container {
@@ -19,10 +21,10 @@
   background: #e2f1f6;
 }
 
-.row {
-background: #e2f1f6;
-box-shadow: 10px 5px 5px black;
-}
+// .row {
+// box-shadow: 10px 5px 5px black;
+// }
+
 .content-container {
   // max-width: 75rem;
   overflow: auto;
@@ -36,15 +38,13 @@ box-shadow: 10px 5px 5px black;
 }
 
 .sidebar {
-  // min-width: 30rem;
-  padding-bottom: 1rem;
-  padding-left: 2rem;
+  padding: 1rem;
 
   background: #e2f1f6;
+  overflow: auto;
 }
 
 .main-content {
-  padding-bottom: 1rem;
   // padding-left: 5rem;
   background: #e2f1f6;
   overflow: auto;
